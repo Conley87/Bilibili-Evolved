@@ -92,7 +92,7 @@ export default Vue.extend({
       getTotal: json => json.data.total,
     })
     allPages.forEach(user => {
-      this.followingMap.set(user.uname, user.tag)
+      this.followingMap.set(user.uname, user.tag ? user.tag : [0])
     })
   },
   methods: {
